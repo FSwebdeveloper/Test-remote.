@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>floating Input</title>
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            display: grid;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .form-section{
+           position: relative;
+           display: flex;
+           flex-direction: flex;
+           gap: 5px;
+           width: 250px;
+           
+        }
+
+        .input-box{
+            padding: 1% 4%;
+            border: none;
+            outline: none;
+            width: 91%;
+            cursor:text;
+        }
+
+        
+
+        
+        .form-label{
+            position: absolute;
+            left: 0.6rem;
+            top: 0.6rem;
+            
+        }
+
+        .btn{
+            padding: 1% 4%;
+        }
+
+
+        .input{
+            border: 1px solid black;
+            
+        }
+
+        .input-box:focus ~ .form-label,
+        .input-box:not(:placeholder-shown).input-box:not(:focus)~.form-label {
+            left: 0;
+            top:0;
+        }
+
+        .normal-div{
+            height: 20px;
+            position: relative;
+        }
+
+    </style>
+
+</head>
+<body>
+    <form class="form-section">
+        <div class="input">
+        <div class="normal-div">
+
+        </div>
+        <input class="input-box" type="text" placeholder="">
+        <label class="form-label">Email address</label>
+    </div>
+        <input class="btn" type="button" value="submit">
+       
+    </form>
+    
+</body>
+</html>
